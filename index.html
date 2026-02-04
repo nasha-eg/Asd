@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>مركز الشهادات والتصاريح الرقمية | وزارة التغير المناخي والبيئة</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        :root {
+            --moccae-green: #7da441;
+            --moccae-gold: #8b6b21;
+            --moccae-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f8fafc;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .font-cairo { font-family: 'Cairo', sans-serif; }
+
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white !important; padding: 0 !important; margin: 0 !important; }
+            #root { padding: 0 !important; margin: 0 !important; }
+            @page { 
+                size: A4; 
+                margin: 0; 
+            }
+            .certificate-page {
+                box-shadow: none !important;
+                border: none !important;
+                margin: 0 !important;
+                padding: 10mm !important;
+                width: 210mm !important;
+                height: 297mm !important;
+                page-break-after: always !important;
+                position: relative !important;
+                display: flex !important;
+                flex-direction: column !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--moccae-green); }
+
+        .fade-in { animation: fadeIn 0.3s ease-out forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 1024px) {
+            .hide-mobile { display: none !important; }
+        }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "qrcode.react": "https://esm.sh/qrcode.react@^4.2.0",
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "react": "https://esm.sh/react@^19.2.3",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+      }
+    }
+    </script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
