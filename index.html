@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAE Phytosanitary Certificate Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Inter:wght@400;600;700;800;900&display=swap');
+        
+        :root {
+            --uae-green: #7da441;
+            --uae-gold: #8b6b21;
+            --uae-dark: #1e293b;
+        }
+
+        body {
+            font-family: 'Cairo', 'Inter', sans-serif;
+            background-color: #f8fafc;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .font-cairo { font-family: 'Cairo', sans-serif; }
+
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white !important; }
+            @page { size: A4; margin: 0; }
+            .certificate-page {
+                box-shadow: none !important;
+                border: none !important;
+                margin: 0 !important;
+                width: 210mm !important;
+                height: 297mm !important;
+                page-break-after: always !important;
+                overflow: hidden !important;
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--uae-green); }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "qrcode.react": "https://esm.sh/qrcode.react@^4.2.0",
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "react": "https://esm.sh/react@^19.2.3",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+      }
+    }
+    </script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
